@@ -12,7 +12,9 @@ body{
     background-color: #FFFFFF;
 }
 .container{
-    padding: 2% 10%;
+    width: 1110px;
+    padding: 2% 0;
+    margin: 0 auto;
 }
 h1{
     font-size: 52px;
@@ -43,7 +45,9 @@ button{
 }
 
 /* Header Style  */
-nav{
+
+/* Navbar */
+.navbar{
     display: flex;
     justify-content: space-between;
 }
@@ -67,10 +71,15 @@ nav{
 }
 
 .hero{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 85vh;
+}
+.hero-content{
+    display: flex;
+    align-items: center;
+}
+.hero-image img{
+    width: 440px;
+    height: 414px;
 }
 .hero-image{
     background-image: url("/images/circle-design.svg");
@@ -80,9 +89,9 @@ nav{
 }
 
 .brand-list{
+    list-style: none;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 .brand-list img{
     width: 91px;
@@ -135,6 +144,7 @@ footer{
     color: #fff;
     text-align: center;
     padding: 50px 0;
+    width: 100%;
 }
 footer h3{
     font-size: 24px;
@@ -143,7 +153,7 @@ footer h3{
 }
 footer p{
     font-size: 14px;
-        line-height: 24px;
+    line-height: 24px;
     color: #D9DBE1;
 }
 footer .social-icon i{
@@ -152,4 +162,49 @@ footer .social-icon i{
     background-color: #03075e;
     padding: 10px;
     border-radius: 25px;
+}
+
+/* Media Quries */
+@media only screen and (max-width:992px){
+
+
+    .container{
+        width: 100%;
+    }
+    .navbar,
+    .hero,
+    .brand-list,main{
+        padding: 25px;
+    }
+
+    ul .nav-list li a,.fa-cart-shopping{
+        display: none;
+    }
+    .hero-content{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .brand-list{
+        flex-wrap: wrap;
+    }
+    .collection-lists {
+            grid-template-columns: repeat(1, 1fr);
+            padding-left:30px;
+    }
+    .collection-item{
+        padding: 30px;
+    }
+    .featured-product{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .featured-product-image {
+        margin-right: 0px;
+    }
+}
+@media only screen and (min-width:992px){
+
+   .hamburger{
+    display: none;
+   }
 }
